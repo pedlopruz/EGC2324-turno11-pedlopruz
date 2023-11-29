@@ -1,6 +1,9 @@
 name: Python application
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
   
 
 jobs:
@@ -41,4 +44,4 @@ jobs:
     - name: Run tests
       run: |
         cd decide
-        ./manage.py test  --keepdb
+        ./manage.py test  voting --keepdb
